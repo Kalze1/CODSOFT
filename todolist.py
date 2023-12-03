@@ -3,7 +3,6 @@ from tkinter import *
 
 root = Tk()
 root.title("To Do List")
-# root.geometry("400 * 650+400+100")
 root.resizable(False, False)
 
 task_list = []
@@ -49,22 +48,22 @@ def deleteTask():
 
 
 
-ImageIcon = PhotoImage(file="image/aaa.png")
+ImageIcon = PhotoImage(file="image/todo.png")
 root.iconphoto(False, ImageIcon)
 
 TopImage = PhotoImage(file="image/aaa.png")
 Label(root, image= TopImage).pack()
 
-DockImage = PhotoImage(file= "image/d.png")
-Label(root, image = DockImage, bg="#32405b").place(x=30 , y = 0)
+# DockImage = PhotoImage(file= "image/menu.png")
+# Label(root, image = DockImage, bg="#32405b").place(x=30 , y = 0)
 
 
 
-noteImage = PhotoImage(file="image/d.png")
+noteImage = PhotoImage(file="image/menu.png")
 Label(root, image=noteImage, bg= "#32405b" ).place(x = 330, y=0)
 
 
-heading = Label(root, text="ALL TASK", font= "arial 20 bold", fg= "white", bg="#32405b")
+heading = Label(root, text="ALL TASK", font= "arial 20 bold", fg= "white", bg="green")
 heading.place(x=130, y=10)
 
 # main
@@ -93,7 +92,7 @@ scrollbar.config(command=listbox.yview)
 
 
 # delete
-delete_icon = PhotoImage(file="image/d1.png")
+delete_icon = PhotoImage(file="image/delete.png")
 Button( root, image=delete_icon, bd=0, command=deleteTask).pack(side=BOTTOM , pady=13)
 
 
